@@ -53,5 +53,5 @@ The designs were created to the following widths:
 
 ### Font
 
-- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Family: [Inter](https://fontsYour Name Here.google.com/specimen/Inter)
 - Weights: 400, 700

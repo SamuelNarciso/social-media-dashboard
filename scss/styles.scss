@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
+
+$Facebook: hsl(208, 92%, 53%);
+$Twitter: hsl(203, 89%, 53%);
+$Instagram: linear-gradient(90deg, rgba(253,196,104,1) 0%, rgba(223,73,150,1) 100%);
+$YouTube: hsl(348, 97%, 39%);
+
+// #### Dark Theme
+$Very_Dark_Blue: hsl(230, 17%, 14%); //(BG)
+$Second_Very_Dark_Blue: hsl(232, 19%, 15%); //(Top BG Pattern)
+$Dark_Desaturated_Blue : hsl(228, 28%, 20%); //(Card BG)
+$Desaturated_Blue: hsl(228, 34%, 66%); //(Text)
+$White: hsl(0, 0%, 100%); //(Text)
+
+$Toggle:linear-gradient(90deg, #378fe6 , #3eda82);
+// #### Light Theme
+
+  $Light_very_pale_blue : hsl(225, 100%, 98%); //(Top BG Pattern)
+  $Light_light_grayish_blue : hsl(227, 47%, 96%); //(Card BG)
+  $Light_dark_grayish_blue : hsl(228, 12%, 44%); //(Text)
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+body{
+    max-width: 1440px;
+    width: 100%;
+    // height: 100vh;
+    padding: 2em 6em;
+    margin: 0 auto;
+    font-size: 14px;
+    background: $White;
+    color: $Very_Dark_Blue;
+    transition: all ease-in-out .3s;
+    &.dark{
+        color: $White;
+        background: $Very_Dark_Blue;
+        transition: all ease-in-out .3s;
+    }
+}
+
+header{
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1{    
+        font-size: 2em;
+    }
+    h3{
+        color: $Desaturated_Blue;
+        font-size: 1em;
+        
+    }
+    .switch{
+        width: 15em;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        label{
+            cursor: pointer;
+            font-size: 1.15em;
+            font-weight: 700;
+
+            color: $Very_Dark_Blue;
+            body.dark &{
+                color: $Desaturated_Blue;
+            }
+        }
+        input[type="checkbox"]{
+            appearance: none;
+            position: relative;
+            width:  4em;
+            height: 1.8em;
+            border-radius: 15px;
+            cursor: pointer;
+            background:  $Desaturated_Blue;
+            body.dark &{
+                background: $Toggle;
+            }                   
+            &::before{
+                position: absolute;
+                top: .10em;
+                right: .25em;
+                content: '';
+                width:  1.5em;
+                height: 1.5em;
+                border-radius: 50%;
+                background: $White;
+                transition: all ease-in-out .25s;
+                
+                body.dark &{
+                    background: $Dark_Desaturated_Blue;
+                    
+                }
+                
+            }
+            &:checked{
+                &::before{
+                 transform: translateX( -2em );
+                }
+            }
+        }
+
+    }
+}
+
+.table{
+    height: 18em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1000px) {
+    .table{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .table{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    
+    body .table {
+        flex-direction: column;
+        height: unset;
+        justify-content: center;
+        align-items: center;
+        .media_card_extended{
+            width: 100%;
+            height: 15em;
+            margin: 1em 0;
+        }
+        .media_card_compressed{
+            font-size: 1.5em;
+            width: 100%;
+            height: 10em;
+            
+        }
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    body{
+        padding: 2em 3em;
+        header{
+            font-size: .85em;
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    body header{
+            font-size: .65em;
+        
+    }
+}
+.color_Facebook{ color: $Facebook; }
+.color_Twitter{ color: $Twitter; }
+.color_Instagram{ color: $Twitter; }
+.color_YouTube{ color: $YouTube; }
+
+.background_Facebook{background: $Facebook; }
+.background_Twitter{background: $Twitter; }
+.background_Instagram{background: $Instagram; }
+.background_YouTube{background: $YouTube; }
+
+
+@import "media_card_extended.scss";
+@import "media_card_compressed";
