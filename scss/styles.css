@@ -14,14 +14,14 @@ body {
   padding: 2em 6em;
   margin: 0 auto;
   font-size: 14px;
-  background: white;
+  background: #ffffff;
   color: #1e202a;
   -webkit-transition: all ease-in-out .3s;
   transition: all ease-in-out .3s;
 }
 
 body.dark {
-  color: white;
+  color: #ffffff;
   background: #1e202a;
   -webkit-transition: all ease-in-out .3s;
   transition: all ease-in-out .3s;
@@ -98,7 +98,7 @@ header .switch input[type="checkbox"]::before {
   width: 1.5em;
   height: 1.5em;
   border-radius: 50%;
-  background: white;
+  background: #ffffff;
   -webkit-transition: all ease-in-out .25s;
   transition: all ease-in-out .25s;
 }
