@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/SamuelNarciso/social-media-dashboard)
-- Live Site URL: [GitHub-Pages](https://your-live-site-url.com)
+- Live Site URL: [GitHub-Pages](https://samuelnarciso.github.io/social-media-dashboard/)
 
 ## My process
 
